@@ -21,6 +21,14 @@ Para el MVP, se solicita que el endpoint (elige el método adecuado) devuelva el
 
 También queda a tu criterio el formato de la respuesta. Puede ser un JSON, texto plano, implementalo como mejor te parezca.
 
+
+```js
+const comidas = ['1','2','3']
+app.get("/food", (req, res) => {
+    res.send({food: comidas[Math.floor(Math.random() * comidas.length)]})
+})
+```
+
 ## Ejercicio 2
 
 Implementa el siguiente endpoint:
@@ -89,3 +97,19 @@ app.put('/users', (res, req) => {
 })
 
 ...
+```
+
+```js
+...
+
+app.delete('/users/:id', (req, res) => {
+    const userId = req.params.id;
+    const sql = `DELETE FROM users WHERE id=${userId}`;
+    db.query(sql, (error, result) => {
+        if(error) res.status(500).send("Error inesperado");
+        res.send(`User ${userId} deleted from the db.`);
+    })
+})
+
+...
+```
