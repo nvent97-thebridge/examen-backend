@@ -4,6 +4,8 @@ Bienvenidos al examen de backend con JavaScript. El objetivo de estos ejercicios
 
 El examen deberá ser entregado en un repositorio **público** de GitHub.
 
+REPOSITORIO: examen-backend-{nombre}-{apellido}
+
 Si lo deseas, puedes crear un solo servidor y resolver todos los ejercicios allí mismo. 
 
 PUERTO: 8000
